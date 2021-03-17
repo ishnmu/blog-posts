@@ -4,14 +4,20 @@
   box-sizing: border-box;
 }
 
+.clear-fix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 18px;
 }
 
 .img {
-  display: block;
-  width: 30%;
+  display: inline-block;
+  width: 100px;
   margin-bottom: 10px;
 }
 
@@ -37,6 +43,67 @@ h2 {
 }
 
 .author-text {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 500;
+  float: left;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.author-text a {
+  font-size: 10px;
+}
+
+.container {
+  width: 1140px;
+  margin: 20px auto 0 auto;
+}
+
+.blog-posts {
+  width: 75%;
+  float: left;
+  padding-right: 20px;
+}
+
+.other-posts {
+  width: 25%;
+  float: left;
+}
+
+.author-info {
+  border-top: 1px solid rgb(53, 52, 52);
+  padding-top: 20px;
+}
+
+.author-info img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  float: left;
+}
+
+.other-post {
+  height: 200px;
+  width: 100%;
+  border: 1px solid rgb(53, 52, 52);
+  border-left: 10px solid green;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 5px;
+
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+.other-post-title {
+  color: rgb(255, 28, 73);
+  text-transform: uppercase;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.other-post-description {
+  margin-top: 10px;
+  font-size: 15px;
 }
